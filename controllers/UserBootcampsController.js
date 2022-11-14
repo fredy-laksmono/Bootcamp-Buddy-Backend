@@ -1,26 +1,26 @@
-const { UserBootcamps } = require('../models')
+const { UserBootcamp } = require("../models");
 
 const getUserBootcamps = async (req, res) => {
   try {
-    const userBootcamps = await UserBootcamps.findAll()
-    res.send(userBootcamps)
+    const userBootcamps = await UserBootcamp.findAll();
+    res.send(userBootcamps);
   } catch (error) {
-    throw error
+    throw error;
   }
-}
+};
 
 const getOneUserBootcamp = async (req, res) => {
   try {
-    const userBootcamp = await UserBootcamps.findByPk(
+    const userBootcamp = await UserBootcamp.findByPk(
       req.params.userBootcamp_id
-    )
-    res.send(userBootcamp)
+    );
+    res.send(userBootcamp);
   } catch (error) {
-    throw error
+    throw error;
   }
-}
+};
 
 module.exports = {
   getUserBootcamps,
   getOneUserBootcamp
-}
+};

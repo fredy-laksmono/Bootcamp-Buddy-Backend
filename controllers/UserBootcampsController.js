@@ -20,7 +20,7 @@ const getOneUserBootcamp = async (req, res) => {
   }
 }
 
-modeule.exports = {
+module.exports = {
   getUserBootcamps,
   getOneUserBootcamp
 }

@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       website: DataTypes.STRING,
       location: DataTypes.STRING,
-      remote: DataTypes.BOOLEAN
+      remote: DataTypes.BOOLEAN,
+      shortDescription: DataTypes.STRING,
+      Description: DataTypes.STRING
     },
     {
       sequelize,

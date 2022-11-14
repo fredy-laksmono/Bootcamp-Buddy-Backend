@@ -9,8 +9,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    return queryInterface.removeColumn('bootcamps', 'shortDescription', {
-      type: Sequelize.VARCHAR(255)
-    })
+    return queryInterface.removeColumn('bootcamps', 'shortDescription')
   }
 }

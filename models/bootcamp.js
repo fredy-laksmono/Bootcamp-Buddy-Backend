@@ -1,21 +1,21 @@
-'use strict'
-const { Model } = require('sequelize')
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Bootcamps extends Model {
+  class Bootcamp extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Bootcamps.belongsToMany(models.Users, {
-        as: 'bootcamp',
-        through: models.UserBootcamps,
-        foreignKey: 'bootcampId'
-      })
+      Bootcamp.belongsToMany(models.User, {
+        as: "bootcamp",
+        through: models.UserBootcamp,
+        foreignKey: "bootcampId"
+      });
     }
   }
-  Bootcamps.init(
+  Bootcamp.init(
     {
       name: DataTypes.STRING,
       website: DataTypes.STRING,
@@ -24,9 +24,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      modelName: 'Bootcamps',
-      tableName: 'bootcamps'
+      modelName: "Bootcamp",
+      tableName: "bootcamps"
     }
-  )
-  return Bootcamps
-}
+  );
+  return Bootcamp;
+};

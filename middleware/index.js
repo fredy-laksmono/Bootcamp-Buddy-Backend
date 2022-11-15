@@ -30,6 +30,7 @@ const verifyToken = (req, res, next) => {
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized request 1.' })
   } catch (error) {
+    console.error(error)
     res.status(401).send({ status: 'Error', msg: 'Unauthorized request 2.' })
   }
 }

@@ -1,17 +1,22 @@
-const { Reviews } = require('../models')
+const { Review } = require('../models')
 
 const getReviews = async (req, res) => {
   try {
-    const reviews = await Reviews.findAll()
+    const reviews = await Review.findAll()
+    console.log('all reviews')
     res.send(reviews)
   } catch (error) {
     throw error
   }
 }
 
-const getOneReview = async (req, res) => {
+const getBootcampReviews = async (req, res) => {
   try {
-    const review = await Reviews.findByPk(req.params.review_id)
+    let bootcampId = parseInt(req.params.bootcamp_id)
+    console.log(bootcampId)
+    const review = await Review.findAll({ where: { bootcampId: bootcampId } })
+    console.log('bootcamp reviews')
+
     res.send(review)
   } catch (error) {
     throw error
@@ -27,7 +32,7 @@ const addReview = async (req, res) => {
       ownerId,
       ...req.body
     }
-    let review = await Reviews.create(reviewContent)
+    let review = await Review.create(reviewContent)
     res.send(review)
   } catch (error) {
     throw error
@@ -37,7 +42,7 @@ const addReview = async (req, res) => {
 const updateReview = async (req, res) => {
   try {
     let reviewId = parseInt(req.params.review_id)
-    let updatedReview = await Reviews.update(req.body, {
+    let updatedReview = await Review.update(req.body, {
       where: { id: reviewId },
       returning: true
     })
@@ -50,7 +55,7 @@ const updateReview = async (req, res) => {
 const deleteReview = async (req, res) => {
   try {
     let reviewId = parseInt(req.params.review_id)
-    await Reviews.destroy({ where: { id: reviewId } })
+    await Review.destroy({ where: { id: reviewId } })
     res.send({ message: `Deleted review with ID of ${reviewId}` })
   } catch (error) {
     throw error
@@ -59,7 +64,7 @@ const deleteReview = async (req, res) => {
 
 module.exports = {
   getReviews,
-  getOneReview,
+  getBootcampReviews,
   addReview,
   updateReview,
   deleteReview

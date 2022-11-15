@@ -1,21 +1,22 @@
 'use strict'
 const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
-  class Reviews extends Model {
+  class Review extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Reviews.belongsTo(models.Users, { foreignKey: 'userId' })
-      Reviews.belongsTo(models.Bootcamps, { foreignKey: 'bootcampId' })
+      Review.belongsTo(models.User, { foreignKey: 'userId' })
+      Review.belongsTo(models.Bootcamp, { foreignKey: 'bootcampId' })
     }
   }
-  Reviews.init(
+  Review.init(
     {
       userId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
         onDelete: 'CASCADE',
         references: {
           model: 'users',
@@ -23,15 +24,21 @@ module.exports = (sequelize, DataTypes) => {
         }
       },
 
-      bootcampId: DataTypes.INTEGER,
+      bootcampId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       content: DataTypes.STRING,
-      rating: DataTypes.INTEGER
+      rating: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      }
     },
     {
       sequelize,
-      modelName: 'Reviews',
+      modelName: 'Review',
       tableName: 'reviews'
     }
   )
-  return Reviews
+  return Review
 }

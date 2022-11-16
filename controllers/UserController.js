@@ -30,9 +30,9 @@ const getUserByEmail = async (req, res) => {
 
 const updateUserEmail = async (req, res) => {
   try {
-    let email = req.params.email
+    let userEmail = req.params.user_email
     let updatedUser = await User.update(req.body, {
-      where: { email: email },
+      where: { email: userEmail },
       returning: true
     })
     res.send(updatedUser)

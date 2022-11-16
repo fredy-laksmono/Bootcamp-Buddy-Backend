@@ -1,5 +1,5 @@
-"use strict";
-const { Model } = require("sequelize");
+'use strict'
+const { Model } = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Bootcamp extends Model {
     /**
@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Bootcamp.belongsToMany(models.User, {
-        as: "bootcamp",
+        as: 'bootcamp',
         through: models.UserBootcamp,
-        foreignKey: "bootcampId"
-      });
+        foreignKey: 'bootcampId'
+      })
     }
   }
   Bootcamp.init(
@@ -22,13 +22,13 @@ module.exports = (sequelize, DataTypes) => {
       location: DataTypes.STRING,
       remote: DataTypes.BOOLEAN,
       shortDescription: DataTypes.STRING,
-      Description: DataTypes.STRING
+      description: DataTypes.STRING
     },
     {
       sequelize,
-      modelName: "Bootcamp",
-      tableName: "bootcamps"
+      modelName: 'Bootcamp',
+      tableName: 'bootcamps'
     }
-  );
-  return Bootcamp;
-};
+  )
+  return Bootcamp
+}

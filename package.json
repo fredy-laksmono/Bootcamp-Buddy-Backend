@@ -1,6 +1,9 @@
 {
   "name": "bootcamp-buddy-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.11.0"
+  },
   "description": "#### [Github Bret](https://github.com/bordencodes) | [Github Fredy](https://github.com/fredy-laksmono) | [Github LaShelle](https://github.com/lnicole3) | [Github Paige](https://github.com/paigelayman) #### [Project Trello](https://trello.com/b/huDaSEtw/bootcamp-buddy) ***",
   "main": "server.js",
   "scripts": {

@@ -4,6 +4,7 @@
   "description": "#### [Github Bret](https://github.com/bordencodes) | [Github Fredy](https://github.com/fredy-laksmono) | [Github LaShelle](https://github.com/lnicole3) | [Github Paige](https://github.com/paigelayman) #### [Project Trello](https://trello.com/b/huDaSEtw/bootcamp-buddy) ***",
   "main": "server.js",
   "scripts": {
+    "build": "npm install && npx sequelize-cli db:migrate",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"

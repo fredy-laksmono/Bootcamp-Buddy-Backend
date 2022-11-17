@@ -1,5 +1,9 @@
 const { and } = require("sequelize");
 const { Review } = require("../models");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
+
+const APP_SECRET = process.env.APP_SECRET;
 
 const getReviews = async (req, res) => {
   try {
@@ -58,11 +62,18 @@ const addReview = async (req, res) => {
 const updateReview = async (req, res) => {
   try {
     let reviewId = parseInt(req.params.review_id);
-    let updatedReview = await Review.update(req.body, {
-      where: { id: reviewId },
-      returning: true
-    });
-    res.send(updatedReview);
+    const token = req.headers["authorization"].split(" ")[1];
+    try {
+      let payload = jwt.verify(token, APP_SECRET);
+      console.log("The current user email is ", payload.id);
+      let updatedReview = await Review.update(req.body, {
+        where: { id: reviewId, userId: payload.id },
+        returning: true
+      });
+      res.send(updatedReview);
+    } catch (error) {
+      throw error;
+    }
   } catch (error) {
     throw error;
   }

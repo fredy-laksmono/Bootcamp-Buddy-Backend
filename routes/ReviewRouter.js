@@ -12,7 +12,7 @@ Router.post(
   controller.addReview
 );
 Router.put(
-  "/:user_id/:review_id",
+  "/:review_id",
   middleware.stripToken,
   middleware.verifyToken,
   controller.updateReview

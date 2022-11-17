@@ -26,13 +26,11 @@ const getBootcampReviews = async (req, res) => {
 
 const isAllowCreateReview = async (req, res) => {
   try {
-    console.log("Hello");
     let userId = parseInt(req.params.user_id);
     let bootcampId = parseInt(req.params.bootcamp_id);
     const review = await Review.findOne({
       where: { userId: userId, bootcampId: bootcampId }
     });
-    console.log("here", review);
     if (review) {
       res.send(false);
     } else {
@@ -65,7 +63,6 @@ const updateReview = async (req, res) => {
     const token = req.headers["authorization"].split(" ")[1];
     try {
       let payload = jwt.verify(token, APP_SECRET);
-      console.log("The current user email is ", payload.id);
       let updatedReview = await Review.update(req.body, {
         where: { id: reviewId, userId: payload.id },
         returning: true

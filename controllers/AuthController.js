@@ -28,16 +28,21 @@ const Login = async (req, res) => {
 const Register = async (req, res) => {
   try {
     const { email, password, firstName, lastName } = req.body
-    let passwordDigest = await middleware.hashPassword(password)
-    console.log(passwordDigest)
-    const user = await User.create({
-      email,
-      passwordDigest,
-      firstName,
-      lastName
-    })
-    res.send(user)
-    // res.send({ status: "Success", msg: "Register called!" });
+    let emailInUse = await User.findOne({ where: { email: email } })
+    if (emailInUse) {
+      console.log(emailInUse)
+      res.status(403).send({ status: 'Error', msg: 'Email already in use.' })
+    } else {
+      let passwordDigest = await middleware.hashPassword(password)
+      console.log(passwordDigest)
+      const user = await User.create({
+        email,
+        passwordDigest,
+        firstName,
+        lastName
+      })
+      res.send(user)
+    }
   } catch (error) {
     throw error
   }

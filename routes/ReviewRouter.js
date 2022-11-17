@@ -4,6 +4,7 @@ const middleware = require("../middleware");
 
 Router.get("/:bootcamp_id", controller.getBootcampReviews);
 Router.get("/", controller.getReviews);
+Router.get("/check/:user_id/:bootcamp_id", controller.isAllowCreateReview);
 Router.post(
   "/:user_id/:bootcamp_id",
   middleware.stripToken,

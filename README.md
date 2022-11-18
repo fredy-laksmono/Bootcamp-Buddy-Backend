@@ -1,13 +1,19 @@
 # Bootcamp-Buddy-Backend
-## Date 11/10/22
-### By: Bret Borden. Fredy Laksmono, LaShelle Rauseo and Paige Layman
+## Date 11/18/22
+### By: [Fredy Laksmono](https://www.linkedin.com/in/fredy-laksmono/), [LaShelle Rauseo](https://www.linkedin.com/in/lashelle-rauseo/), [Paige Layman](https://www.linkedin.com/in/paige-layman/),[Bret Borden](https://www.linkedin.com/in/bret-borden/)
 
 #### [Github Bret](https://github.com/bordencodes) | [Github Fredy](https://github.com/fredy-laksmono) | [Github LaShelle](https://github.com/lnicole3) | [Github Paige](https://github.com/paigelayman)
 #### [Project Trello](https://trello.com/b/huDaSEtw/bootcamp-buddy)
-***
+
+---
+
+[App](https://bootcamp-buddy-app.herokuapp.com/) | [Front-end GitHub](https://github.com/paigelayman/bootcamp-buddy-frontend) | [Back-end GitHub](https://github.com/fredy-laksmono/bootcamp-buddy-backend)
+
+---
 
 ### Description
-Provide a social place for people who want to connect and share their experience and knowledge about Bootcamp they have/will take. Prospective student can use the info to help guide their decision which Bootcamp best fit for them.
+![Logo](/assets/bootcamp-buddy-logo.png)   
+"Bootcamp Buddy is a tool for Software Engineers across the globe. Users are just one click away from getting basic information about any bootcamp, as well as read the personal reviews of attendees. Browse as a guest, or get involved by creating an account and placing a review for any bootcamp you have attended!"
 
 ***
 
@@ -24,10 +30,12 @@ Provide a social place for people who want to connect and share their experience
 ***
 
 ### Getting Started
-1. Visit our app. Link will be provided when it's published.
-2. Select any bootcamp you are interested to view.
-3. In order to join/post, you need to have an account. Click Login/Register at the top based on what you need.
-4. Once you're signed in, you can join Bootcamp and start posting on the Bootcamp you joined.
+[Bootcamp-Buddy-App](https://bootcamp-buddy-app.herokuapp.com/)   
+When you open the app you are able to view all bootcamps in the database.  
+![Home Page Screenshot](/assets/screenshot-home.png)
+Click on any Bootcamp to get access to the details page, where you get information about that specific bootcamp, as well as read and create reviews.
+You can register with your first name, last name, e-mail, in order to create a review. You are only able to create one review per bootcamp, however, you can edit and delete your comment.
+![Register Page Screenshot](/assets/screenshot-register.png)
 
 ***
 
@@ -44,4 +52,7 @@ PostgreSQL: [https://www.postgresql.org]
 Sequelize: [https://sequelize.org/]  
 Express: [https://expressjs.com/]   
 React:[https://reactjs.org/]   
-NodeJs: [https://nodejs.org/en/]
+NodeJs: [https://nodejs.org/en/]   
+Canva: [https://www.canva.com/]   
+W3 Schools: [https://www.w3schools.com/]   
+Coolers: [https://coolors.co/]   

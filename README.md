@@ -1,6 +1,6 @@
 # Bootcamp-Buddy-Backend
 ## Date 11/18/22
-### By: [Fredy Laksmono](https://www.linkedin.com/in/fredy-laksmono/), [LaShelle Rauseo](https://www.linkedin.com/in/lashelle-rauseo/), [Paige Layman](https://www.linkedin.com/in/paige-layman/),[Bret Borden](https://www.linkedin.com/in/bret-borden/)
+### By: [Bret Borden](https://www.linkedin.com/in/bret-borden/), [Fredy Laksmono](https://www.linkedin.com/in/fredy-laksmono/), [LaShelle Rauseo](https://www.linkedin.com/in/lashelle-rauseo/), [Paige Layman](https://www.linkedin.com/in/paige-layman/)
 
 #### [Github Bret](https://github.com/bordencodes) | [Github Fredy](https://github.com/fredy-laksmono) | [Github LaShelle](https://github.com/lnicole3) | [Github Paige](https://github.com/paigelayman)
 #### [Project Trello](https://trello.com/b/huDaSEtw/bootcamp-buddy)

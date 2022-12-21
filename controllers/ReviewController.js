@@ -1,4 +1,3 @@
-const { and } = require("sequelize");
 const { Review } = require("../models");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();

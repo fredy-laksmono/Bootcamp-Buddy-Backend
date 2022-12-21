@@ -7,7 +7,7 @@
 
 ---
 
-[App](https://bootcamp-buddy-app.herokuapp.com/) | [Front-end GitHub](https://github.com/paigelayman/bootcamp-buddy-frontend) | [Back-end GitHub](https://github.com/fredy-laksmono/bootcamp-buddy-backend)
+[App](https://bootcamp-buddy-fl.herokuapp.com/) | [Front-end GitHub](https://github.com/paigelayman/bootcamp-buddy-frontend) | [Back-end GitHub](https://github.com/fredy-laksmono/bootcamp-buddy-backend)
 
 ---
 

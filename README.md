@@ -30,7 +30,7 @@
 ***
 
 ### Getting Started
-[Bootcamp-Buddy-App](https://bootcamp-buddy-app.herokuapp.com/)   
+[Bootcamp-Buddy-App](https://bootcamp-buddy-fl.herokuapp.com/)   
 When you open the app you are able to view all bootcamps in the database.  
 ![Home Page Screenshot](/assets/screenshot-home.png)
 Click on any Bootcamp to get access to the details page, where you get information about that specific bootcamp, as well as read and create reviews.
